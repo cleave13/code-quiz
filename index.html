@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizzy | Multiple Choice Quiz Application</title>
+    <title>Quizzly | Multiple Choice Quizes</title>
     
-    <!-- Link external style sheet -->
+    <!-- Link external style sheets -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -15,7 +16,8 @@
     <!-- Universal header used across all pages -->
     <header>
         <!-- Populated based on deck name in JavaScript -->
-        <h1 class="main-header"></h1>
+        <h1 class="main-header"> <!--PLACEHOLDER-->JavaScript Quiz
+        </h1>
     </header>
     <main>
 
@@ -24,7 +26,7 @@
             <!-- Start scoreboard section -->
             <section id="scores">
                 <header>
-                    <h2 id="scores-title">High Scores</h2>
+                    <h2 id="scores-title">High scores</h2>
                 </header>
                 <table id="scores-table">
                     <tr>
@@ -32,21 +34,57 @@
                         <td>Name</td>
                         <td>Score</td>
                     </tr>
+                    <!--PLACEHOLDER-->
+                    <tr>
+                        <td>1</td>
+                        <td>Darby</td>
+                        <td>750</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Chris</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ellie</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Bubby</td>
+                        <td>280</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Kima</td>
+                        <td>220</td>
+                    </tr>
                 </table>
                 <!-- Calls to action that allow the user to interact with the game -->
                 <div id="game-controls">
-                    <button id="btn-start">Start Game</button>
-                    <button id="btn-clear">Clear Scores</button>
+                    <button class="btn-main" id="btn-start">Start Game</button>
+                    <button class="btn-second" id="btn-clear">Clear Scores</button>
                 </div>
             </section>
             <!-- Start rules section -->
             <aside id="rules">
                 <header>
-                    <h2 id="rules-title">Rules of the Game</h2>
+                    <h2 id="rules-title">How to play</h2>
                     <ul id="rules-list">
-                        <li class="rule-item"></li>
-                        <li class="rule-item"></li>
-                        <li class="rule-item"></li>
+                        <li class="rule-item">
+                            Each round starts with a 60 second timer.
+                        </li>
+                        <li class="rule-item">
+                            Correct answers will add 10 points to your total score.
+                        </li>
+                        <li class="rule-item">
+                            Incorrect answers remove 5 seconds from the timer.
+                        </li>
+                        <li class="rule-item">
+                            Click the "Start Game" button to begin playing.
+                        </li>
+                         
                     </ul>
                 </header>
             </aside>

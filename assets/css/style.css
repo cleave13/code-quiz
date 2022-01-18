@@ -1,0 +1,118 @@
+:root {
+    --theme-color: blue;
+    --theme-secondary: cornflowerblue;
+    --text-primary: #262626;
+    --text-secondary: #303030;
+    --text-light: white;
+}
+
+@font-face {
+    font-family: "Handlee-Regular";
+    src: url(../fonts/Handlee-Regular.ttf);
+}
+
+* {
+    font-family: Handlee-Regular;
+    font-size: 20px;
+    color: var(--text-primary)
+}
+
+body {
+    border: 2px var(--theme-color) solid;
+}
+
+main {
+    margin: 5%;
+}
+
+header {
+    margin: 5% 0;
+}
+
+h1 {
+    font-size: 180%;
+}
+
+h2 {
+    font-size: 130%;
+}
+
+table {
+    margin: 5% auto;
+    padding-left: 6%;
+    width: 100%;
+}
+
+tr:first-child {
+    font-weight: bold;
+}
+
+td {
+    padding: 2%;
+}
+
+button {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button:hover {
+    box-shadow: 10px 5px 5px var(--text-primary);;
+}
+
+ul {
+    margin-left: 2em;
+}
+
+li {
+    list-style: square;
+    margin: 4% 0;
+}
+
+li:last-of-type {
+    margin-bottom: 0;
+}
+
+.full-width {
+    width: 100%
+}
+
+.main-header {
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+}
+
+.btn-main {
+    background-color: var(--theme-color);
+    color: var(--text-light);
+}
+
+.btn-second {
+    background-color: var(--text-light);
+    color: var(--theme-color);
+}
+
+#rules-title {
+    margin-bottom: 1em;
+}
+
+#game-controls {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10%;
+    margin-top: 10%;
+    gap: 25px;
+}
+
+#scores {
+    margin-top: 5%;
+    width: 100%;
+}
