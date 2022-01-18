@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzy | Multiple Choice Quiz Application</title>
+    
+    <!-- Link external style sheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- Universal header used across all pages -->
+    <header>
+        <!-- Populated based on deck name in JavaScript -->
+        <h1 class="main-header"></h1>
+    </header>
+    <main>
+
+        <!-- Start game homepage content -->
+        <div class="container" id="game-home">
+            <!-- Start scoreboard section -->
+            <section id="scores">
+                <header>
+                    <h2 id="scores-title">High Scores</h2>
+                </header>
+                <table id="scores-table">
+                    <tr>
+                        <td>Rank</td>
+                        <td>Name</td>
+                        <td>Score</td>
+                    </tr>
+                </table>
+                <!-- Calls to action that allow the user to interact with the game -->
+                <div id="game-controls">
+                    <button id="btn-start">Start Game</button>
+                    <button id="btn-clear">Clear Scores</button>
+                </div>
+            </section>
+            <!-- Start rules section -->
+            <aside id="rules">
+                <header>
+                    <h2 id="rules-title">Rules of the Game</h2>
+                    <ul id="rules-list">
+                        <li class="rule-item"></li>
+                        <li class="rule-item"></li>
+                        <li class="rule-item"></li>
+                    </ul>
+                </header>
+            </aside>
+        </div>
+
+        <!-- Start game play content -->
+        <div class="container" id="game-play" hidden="true">
+            <!-- Start question and answer area -->
+            <section id="questions">
+                <header><h3 id="question-name"></h3></header>
+                <ul id="answer-list">
+                    <!-- One list item per answer populated dynamically by JavaScript -->
+                </ul>
+            </section>
+            <!-- Output elements returned by JavaScript -->
+            <aside id="game-info">
+                <div class="game-output">
+                    <h2>Timer: <span id="time-left"></span></h2>
+                </div>
+                <div class="game-output">
+                    <h2>Points: <span id="points"></span></h2>
+                </div>
+                <button id="btn-leave">Leave Game</button>
+            </aside>
+        </div>
+
+        <!-- Start prompt user for their name after the game ends -->
+        <div class="container" id="game-over" hidden="true">
+            <header>
+                <h2>Game Over!</h2>
+            </header>
+            <form action="submit">
+                <label for="player-name">Enter your name</label><br>
+                <input type="text" id="player-name">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+    </main>
+    <!-- Link external JavaScript file -->
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
