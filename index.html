@@ -5,127 +5,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome embed code for icons -->
+    <script src="https://kit.fontawesome.com/cc5d77598e.js" crossorigin="anonymous"></script>
     <title>Quizzly | Multiple Choice Quizes</title>
-    
+
     <!-- Link external style sheets -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <!-- Universal header used across all pages -->
-    <header>
-        <!-- Populated based on deck name in JavaScript -->
-        <h1 class="main-header"> <!--PLACEHOLDER-->JavaScript Quiz
-        </h1>
-    </header>
-    <main>
+        <!-- Universal header used across all pages -->
+        <header>
+            <!-- Populated based on deck name in JavaScript -->
+            <h1 class="main-header">
+                <!--PLACEHOLDER-->JavaScript Quiz
+            </h1>
+        </header>
+        <main>
+            <!-- Start game homepage content -->
+            <div class="wrapper" id="game-home">
+                <!-- Start rules section -->
+                <aside id="rules">
+                    <header>
+                        <h2 id="rules-title">How to play</h2>
+                        <ul id="rules-list">
+                            <li class="rule-item">
+                                Each round starts with a 60 second timer.
+                            </li>
+                            <li class="rule-item">
+                                Correct answers will add 10 points to your total score.
+                            </li>
+                            <li class="rule-item">
+                                Incorrect answers remove 10 seconds from the timer.
+                            </li>
+                            <li class="rule-item">
+                                Click the "Start Game" button to begin playing.
+                            </li>
 
-        <!-- Start game homepage content -->
-        <div class="container" id="game-home">
-            <!-- Start scoreboard section -->
-            <section id="scores">
+                        </ul>
+                    </header>
+                </aside>
+                <!-- Start scoreboard section -->
+                <section id="scores">
+                    <header>
+                        <h2 id="scores-title">High scores</h2>
+                    </header>
+                    <table id="scores-table">
+                        <tr>
+                            <td>Rank</td>
+                            <td>Name</td>
+                            <td>Score</td>
+                        </tr>
+                        <!--PLACEHOLDER-->
+                        <tr>
+                            <td>1</td>
+                            <td>Darby</td>
+                            <td>750</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Chris</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Ellie</td>
+                            <td>350</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Bubby</td>
+                            <td>280</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Kima</td>
+                            <td>220</td>
+                        </tr>
+                    </table>
+                    <!-- Calls to action that allow the user to interact with the game -->
+                    <div id="game-controls">
+                        <button class="btn-first" id="btn-start">Start Game</button>
+                        <button class="btn-second" id="btn-clear">Clear Scores</button>
+                    </div>
+                </section>
+            </div>
+            <!-- Start game play content -->
+            <div id="game-play">
+                <div class="wrapper" id="game-sections">
+                    <section id="questions">
+                        <header>
+                            <h3 id="question-name">Is JavaScript an interpretted version of Java?</h3>
+                        </header>
+                        <ul id="answer-list">
+                            <!-- One list item per answer populated dynamically by JavaScript -->
+                            <li class="answer-item">JavaScript is my writing speed.</li>
+                            <li class="answer-item">JavaScript is my writing speed.</li>
+                            <li class="answer-item">JavaScript is my writing speed.</li>
+                            <li class="answer-item">JavaScript is my writing speed.</li>
+                        </ul>
+                    </section>
+                    <!-- Start question and answer area -->
+                    <!-- Output elements returned by JavaScript -->
+                    <aside id="game-info">
+                        <div class="game-output">
+                            <div class="output-item">
+                                <h2>Timer: <span id="time-left">60</span></h2>
+                            </div>
+                            <div class="output-item">
+                                <h2>Points: <span id="points">120</span></h2>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="btn-wrapper">
+                    <button class="btn-second" id="btn-leave">Leave Game</button>
+                </div>
+            </div>
+            <!-- Start prompt user for their name after the game ends -->
+            <div class="wrapper" id="game-over" hidden="true">
                 <header>
-                    <h2 id="scores-title">High scores</h2>
+                    <h2>Game Over!</h2>
                 </header>
-                <table id="scores-table">
-                    <tr>
-                        <td>Rank</td>
-                        <td>Name</td>
-                        <td>Score</td>
-                    </tr>
-                    <!--PLACEHOLDER-->
-                    <tr>
-                        <td>1</td>
-                        <td>Darby</td>
-                        <td>750</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Chris</td>
-                        <td>500</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Ellie</td>
-                        <td>350</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Bubby</td>
-                        <td>280</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Kima</td>
-                        <td>220</td>
-                    </tr>
-                </table>
-                <!-- Calls to action that allow the user to interact with the game -->
-                <div id="game-controls">
-                    <button class="btn-main" id="btn-start">Start Game</button>
-                    <button class="btn-second" id="btn-clear">Clear Scores</button>
-                </div>
-            </section>
-            <!-- Start rules section -->
-            <aside id="rules">
-                <header>
-                    <h2 id="rules-title">How to play</h2>
-                    <ul id="rules-list">
-                        <li class="rule-item">
-                            Each round starts with a 60 second timer.
-                        </li>
-                        <li class="rule-item">
-                            Correct answers will add 10 points to your total score.
-                        </li>
-                        <li class="rule-item">
-                            Incorrect answers remove 5 seconds from the timer.
-                        </li>
-                        <li class="rule-item">
-                            Click the "Start Game" button to begin playing.
-                        </li>
-                         
-                    </ul>
-                </header>
-            </aside>
-        </div>
-
-        <!-- Start game play content -->
-        <div class="container" id="game-play" hidden="true">
-            <!-- Start question and answer area -->
-            <section id="questions">
-                <header><h3 id="question-name"></h3></header>
-                <ul id="answer-list">
-                    <!-- One list item per answer populated dynamically by JavaScript -->
-                </ul>
-            </section>
-            <!-- Output elements returned by JavaScript -->
-            <aside id="game-info">
-                <div class="game-output">
-                    <h2>Timer: <span id="time-left"></span></h2>
-                </div>
-                <div class="game-output">
-                    <h2>Points: <span id="points"></span></h2>
-                </div>
-                <button id="btn-leave">Leave Game</button>
-            </aside>
-        </div>
-
-        <!-- Start prompt user for their name after the game ends -->
-        <div class="container" id="game-over" hidden="true">
-            <header>
-                <h2>Game Over!</h2>
-            </header>
-            <form action="submit">
-                <label for="player-name">Enter your name</label><br>
-                <input type="text" id="player-name">
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </main>
-    </main>
-    <!-- Link external JavaScript file -->
-    <script src="./assets/js/app.js"></script>
+                <form action="submit">
+                    <label for="player-name">Enter your name</label>
+                    <input type="text" id="player-name">
+                    <button class="btn-first" id="btn-finish">Submit</button>
+                </form>
+                <span id="medal-style">
+                    <i class="fas fa-medal fa-10x"></i>
+                </span>
+                <p>Here's your participation award... you earned it.</p>
+            </div>
+        </main>
+        </main>
+        <!-- Link external JavaScript file -->
+        <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
