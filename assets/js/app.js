@@ -27,21 +27,72 @@ let deck = {
     name: 'JavaScript Quiz',
     questions: [
         {
-            questionName: 'Question 1',
+            questionName: 'What do you call a collection of multiple elements?',
             answers: [
-                { answerText: 'Answer 1-1', isCorrect: true },
-                { answerText: 'Answer 1-2', isCorrect: false },
-                { answerText: 'Answer 1-3', isCorrect: false },
-                { answerText: 'Answer 1-4', isCorrect: false }
+                { answerText: 'An array', isCorrect: true },
+                { answerText: 'A collection', isCorrect: false },
+                { answerText: 'A bucket', isCorrect: false },
+                { answerText: 'A set', isCorrect: false }
             ]
         },
         {
-            questionName: 'Question 2',
+            questionName: 'What does the typeof operator do?',
             answers: [
-                { answerText: 'Answer 2-1', isCorrect: true },
-                { answerText: 'Answer 2-2', isCorrect: false },
-                { answerText: 'Answer 2-3', isCorrect: false },
-                { answerText: 'Answer 2-4', isCorrect: false }
+                { answerText: 'Changes the type of a variable', isCorrect: false },
+                { answerText: 'Returns a string representing the type of and element', isCorrect: true },
+                { answerText: 'Prints the special function "of" to the console', isCorrect: false },
+                { answerText: 'typeof is not a javascript operator', isCorrect: false }
+            ]
+        },{
+            questionName: 'Is JavaScript an interpretted version of Java?',
+            answers: [
+                { answerText: 'You better believe it!', isCorrect: false },
+                { answerText: 'No way, Jose. It is its own separate programming language.', isCorrect: true },
+                { answerText: 'It is an uninterpretted version of Java', isCorrect: false },
+                { answerText: 'JavaScript is the scripted version of Java', isCorrect: false }
+            ]
+        },
+        {
+            questionName: 'JavaScript is a loosely typed language. What does that mean?',
+            answers: [
+                { answerText: 'Its variables can be declared without a type unlike other languages', isCorrect: true },
+                { answerText: 'It requires so many keystrokes, you should stay loose while coding', isCorrect: false },
+                { answerText: 'It is forgiving of typos unlike other languages', isCorrect: false },
+                { answerText: 'The original javascript was handwritten', isCorrect: false }
+            ]
+        },{
+            questionName: 'Which layer of an application does JavaScript primarily control?',
+            answers: [
+                { answerText: 'The behavioral layer', isCorrect: true },
+                { answerText: 'The presentation layer', isCorrect: false },
+                { answerText: 'The content layer', isCorrect: false },
+                { answerText: 'The onion layer', isCorrect: false }
+            ]
+        },
+        {
+            questionName: 'What is the definition of an object in javascript?',
+            answers: [
+                { answerText: 'A standalone entity made up of properties and functions', isCorrect: true },
+                { answerText: 'A set of procedures to be executed when called', isCorrect: false },
+                { answerText: 'An attribute that can be changed throughout an application', isCorrect: false },
+                { answerText: 'An object is the same as a function', isCorrect: false }
+            ]
+        },{
+            questionName: 'Which of the following is false?',
+            answers: [
+                { answerText: 'A function declaration must be must be declared before it is called.', isCorrect: true },
+                { answerText: 'A variable declared with the "var" keyword is globally scoped', isCorrect: false },
+                { answerText: 'A function expression cannot be hoisted', isCorrect: false },
+                { answerText: 'Javascript has a list of reserved keywords', isCorrect: false }
+            ]
+        },
+        {
+            questionName: 'Who would win in a fight: Chuck Norris or JavaScript?',
+            answers: [
+                { answerText: 'Chuck Norris wins every fight', isCorrect: true },
+                { answerText: 'JavaScript would throw Chuck Norris into an infinite loop', isCorrect: false },
+                { answerText: `They'd probably be friends - A fight is very unlikely`, isCorrect: false },
+                { answerText: `You ran out of questions, didn't you...`, isCorrect: false }
             ]
         }
     ]
