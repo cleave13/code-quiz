@@ -7,35 +7,42 @@
     --text-light: white;
 }
 
+/* Adds the external font file from the fonts folder */
 @font-face {
     font-family: "Handlee-Regular";
     src: url(../fonts/Handlee-Regular.ttf);
 }
 
+/* Defines default font properties for all elements */
 * {
     font-family: Handlee-Regular;
     font-size: 20px;
     color: var(--text-secondary);
 }
 
+/* Sets the standard margin and border properties for the document body */
 body {
     margin: 1%;
     border: 4px var(--theme-color) solid;
     border-radius: 10px;
 }
 
+/* Sets the stadard margin for the main content */
 main {
     margin: 5%;
 }
 
+/* Applies top and bottom margin to the header elements */
 header {
     margin: 6% 0;
 }
 
+/* Sets header tags to a consistent text color */
 h1, h2, h3 {
     color: var(--text-primary);
 }
 
+/* Defines the font-size for all header elements */
 h1 {
     font-size: 180%;
 }
@@ -48,68 +55,82 @@ h3 {
     font-size: 130%;
 }
 
+/* Sets marging, padding and width properties for all tables in the app */
 table {
     margin: 5% auto;
     padding-left: 6%;
     width: 100%;
 }
 
-tr:first-child {
+/* Makes table header elements bold */
+thead {
     font-weight: bold;
 }
 
+/* adds padding to table cells */
 td {
     padding: 2%;
 }
 
+/* Gives every button a rounded border */
 button {
     border-radius: 5px;
     padding: 10px;
 }
 
+/* adds a shadow effect when a button is hovered over */
 button:hover {
     box-shadow: 10px 5px 5px var(--text-primary);
 }
 
+/* Indents unordered lists */
 ul {
     margin-left: 2em;
 }
 
+/* Sets the style of the bullet points in list items and gives top and bottom margin  */
 li {
     list-style: square;
     margin: 4% 0;
 }
 
+/* removes the margin from the last list item to avoid too much spacing */
 li:last-of-type {
     margin-bottom: 0;
 }
 
+/* styles the form elements with a border */
 form {
     border: 2px solid var(--theme-color);
     border-radius: 10px;
     padding: 30px;
 }
 
+/* sets the size of the form label */
 form > label {
     font-size: 180%;
     padding-bottom: 10%;
 }
 
+/* makes the form input box full-width and sets the height and font size */
 form > input {
     width: 100%;
     height: 50px;
     font-size: 150%;
 }
 
+/* sets the spacing for the first form input element */
 form > input:first-of-type {
     
     margin: 10% 0 5% 0;
 }
 
+/* sets element width to 100% */
 .full-width {
     width: 100%
 }
 
+/* turns the wrapper into a flexbox and defines the flex behavior */
 .wrapper {
     margin: 5%;
     display: flex;
@@ -117,22 +138,26 @@ form > input:first-of-type {
     flex-direction: row;
 }
 
+/* sets styling for primary buttons */
 .btn-first {
     background-color: var(--theme-color);
     color: var(--text-light);
 }
 
+/* sets styling for secondary buttons */
 .btn-second {
     background-color: var(--text-light);
     color: var(--text-orange);
 }
 
+/* centers the button in it's wrapper */
 .btn-wrapper {
     text-align: center;
     width: 100%;
     margin-top: 20%;
 }
 
+/* defines flex behavior for the game's output elements */
 .game-output {
     width: 100%;
     display: flex;
@@ -142,10 +167,12 @@ form > input:first-of-type {
     margin-top: 10%;
 }
 
+/* increses spacing for output items */
 .output-item {
     margin: 5% 0;
 }
 
+/* positions the answer items and adds border styling */
 .answer-item {
     list-style: none;
     line-height: 1.5;
@@ -156,10 +183,12 @@ form > input:first-of-type {
     box-shadow: 2px 2px 2px var(--text-primary);
 }
 
+/* Styles the font-awesome elements */
 .fas {
     color: rgb(99, 99, 99);
 }
 
+/* sets text properties of the primary header */
 #main-header {
     color: var(--text-primary);
     font-weight: bolder;
@@ -168,10 +197,12 @@ form > input:first-of-type {
     margin-top: 15%;
 }
 
+/* increases spacing between the rule header and text */
 #rules-title {
     margin-bottom: 1em;
 }
 
+/* centers the game pay buttons in their flex container */
 #game-controls {
     display: flex;
     justify-content: center;
@@ -179,6 +210,7 @@ form > input:first-of-type {
     gap: 25px;
 }
 
+/* styles the high scores table */
 #scores {
     margin-top: 5%;
     width: 100%;
@@ -188,52 +220,63 @@ form > input:first-of-type {
     box-shadow: 5px 5px 5px #b6b6b6;
 }
 
+/* increases negative space between the high scores header and the table */
 #scores-title {
     margin-left: 5%;
 }
 
+/* makes game-info id full width */
 #game-info {
     width: 100%;
 }
 
+/* Makes the game sections wrap in the reverse order for mobile layout */
 #game-sections {
     flex-wrap: wrap-reverse;
 }
 
+/* centers the questions in their parent element */
 #questions {
     width: 100%;
     margin: 0 auto;
 }
 
+/* sets spacing and line height in the question name */
 #question-name {
     margin: 10% 5% 7% 5%;
     line-height: 1.5;
 }
 
+/* removes the margin from all answers in the list */
 #answer-list {
     margin: 0;
 }
 
+/* displays the elements in the game over container as block elements */
 #game-over {
     display: block;
 }
 
+/* styles the game over header */
 #game-over > header {
     font-size: 200%;
     margin: 10% 0 10% 0;
     text-align: center;
 }
 
+/* styles the game over paragraphs */
 #game-over > p {
     color: var(--text-secondary);
     text-align: center;
 }
 
+/* gives the game over's subumit button unique styling */
 #btn-finish {
     width: 100%;
     font-size: 180%;
 }
 
+/* styles the font-awesome medal */
 #medal-style {
     display: block;
     font-size: 100%;
@@ -242,66 +285,66 @@ form > input:first-of-type {
     color: tomato;
 }
 
-/* #game-over, #game-home {
-    display: none;
-} */
-
+/* defines the styling rules for screen width greater than 900px */
 @media screen and (min-width: 900px) {
     
+    /* increases font size for larger screens */
     * {
         font-size: 24px;
     }
 
-    html {
-        overflow: auto;
-    }
-
-    body {
-        
-        min-height: 96%;
-    }
-
+    /* overrides default margin to 0 */
     main {
         margin: 0;
     }
 
+    /* sets default header spacing to 5% margin */
     header {
         margin: 5%;
     }
 
+    /* increases h1 font size to 200% of the default */
     h1 {
         font-size: 200%;
     }
 
+    /* adds additional spacing between list items */
     li {
         margin: 10% 0;
     }
+
+    /* sets form width to 60% of the page and centers the form on the page */
     form {
         width: 60%;
         margin: 0 auto;
     }
 
+    /* increases form label size for larger devices  */
     form > label {
         font-size: 150%;
         padding-bottom: 5%;
     }
     
-
+    /* changes flex behavior for full screens */
     .wrapper {
         flex-wrap: wrap-reverse;
         justify-content: space-between;
         margin: 3% 5%;
     }
 
+    /* positions game outputs for full screen */
     .game-output {
         width: 100%;
         margin: 55% 0 0 10%;
         flex-direction: column;
     }
 
+    /* adds 10% margin to output items */
     .output-item{
         margin: 10% 0;
     }
+
+    /* positions the leave button to a different area than the mobile layout */
     .btn-wrapper {
         width: 150px;
         margin: 0 0 0 87%;
@@ -311,49 +354,59 @@ form > input:first-of-type {
         bottom: 175px;
     }
 
+    /* removes top margin from the main header */
     #main-header {
         margin-top: 0;
     }
 
+    /* allows the scores to stack to the right of the instructions by reducing the width of the flex item */
     #scores {
         margin: 0;
         width: 50%;
         padding: 0;
     }
 
+    /* indents the scores table */
     #scores-table {
         margin-left: 5%;
     }
 
+    /* reduces the width of the rules flex item so that it sits next to the scores */
     #rules {
         margin: 0;
         padding: 0;
         width: 40%;
     }
 
+    /* changes spacing of the game controls on the home page */
     #game-controls {
         margin-top: 5%;
         margin-bottom: 5%;
         gap: 5%;
     }
 
+    /* reduced game info width to 20% */
     #game-info {
         width: 20%;
         margin: 0;
     }
 
+    /* reduces the questions to 60% so they sit next to the game info on full screens */
     #questions {
         width: 60%;
     }
 
+    /* removes margin from question-name element */
     #question-name {
         margin: 0;
     }
 
+    /* changes the negative spacing on the game over header element */
     #game-over > header {
         margin: 5% 0 2% 0;
     }
 
+    /* reduces the relative sizing of the participation medal */
     #medal-style {
         display: block;
         font-size: 50%;
