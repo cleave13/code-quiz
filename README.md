@@ -18,9 +18,9 @@ By the end of this exercise, I feel much more comfortable with each of the eleme
 
 ## Access the application
 
-The deployed application can be accessed [here] (https://cleave13.github.io/code-quiz/)
+The deployed application can be accessed [here](https://cleave13.github.io/code-quiz/)
 
-The source code can be found [here] (https://github.com/cleave13/code-quiz)
+The source code can be found [here](https://github.com/cleave13/code-quiz)
 
 
 ## How to play
