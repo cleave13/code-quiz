@@ -110,14 +110,6 @@ form > input:first-of-type {
     width: 100%
 }
 
-.main-header {
-    color: var(--text-primary);
-    font-weight: bolder;
-    text-align: center;
-    width: 100%;
-    margin-top: 15%;
-}
-
 .wrapper {
     margin: 5%;
     display: flex;
@@ -168,6 +160,14 @@ form > input:first-of-type {
     color: rgb(99, 99, 99);
 }
 
+#main-header {
+    color: var(--text-primary);
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    margin-top: 15%;
+}
+
 #rules-title {
     margin-bottom: 1em;
 }
@@ -182,6 +182,14 @@ form > input:first-of-type {
 #scores {
     margin-top: 5%;
     width: 100%;
+    border: 3px solid var(--theme-secondary);
+    border-radius: 10px;
+    padding-bottom: 5%;
+    box-shadow: 5px 5px 5px #b6b6b6;
+}
+
+#scores-title {
+    margin-left: 5%;
 }
 
 #game-info {
@@ -193,6 +201,7 @@ form > input:first-of-type {
 }
 
 #questions {
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -233,9 +242,9 @@ form > input:first-of-type {
     color: tomato;
 }
 
-#game-over, #game-home {
+/* #game-over, #game-home {
     display: none;
-}
+} */
 
 @media screen and (min-width: 900px) {
     
@@ -267,10 +276,16 @@ form > input:first-of-type {
     li {
         margin: 10% 0;
     }
-    
-    .main-header {
-        margin-top: 0;
+    form {
+        width: 60%;
+        margin: 0 auto;
     }
+
+    form > label {
+        font-size: 150%;
+        padding-bottom: 5%;
+    }
+    
 
     .wrapper {
         flex-wrap: wrap-reverse;
@@ -296,11 +311,14 @@ form > input:first-of-type {
         bottom: 175px;
     }
 
+    #main-header {
+        margin-top: 0;
+    }
+
     #scores {
         margin: 0;
         width: 50%;
-        border: 3px solid var(--theme-secondary);
-        border-radius: 10px;
+        padding: 0;
     }
 
     #scores-table {
@@ -330,6 +348,18 @@ form > input:first-of-type {
 
     #question-name {
         margin: 0;
+    }
+
+    #game-over > header {
+        margin: 5% 0 2% 0;
+    }
+
+    #medal-style {
+        display: block;
+        font-size: 50%;
+        margin: 5% auto;
+        text-align: center;
+        color: tomato;
     }
 
 }
