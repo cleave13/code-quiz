@@ -143,8 +143,7 @@ function showScores() {
             const savedScore = games[i];
             playerName.textContent = savedScore.player;
             playerScore.textContent = savedScore.score;
-            console.log(playerName.textContent);
-            console.log(playerScore.textContent);
+
         } else {
             // if we reach the end of the local storage array, then placeholders are populated in the scores table.
             playerName.textContent = '--';
@@ -184,15 +183,16 @@ function startTimer() {
             clearInterval(timerInterval);
         } else {  //if the timer remains active, it decrements every 1000 ms and displays the remaining time in the timeLeft element in the DOM.
             secondsLeft--;
-            timeLeftEl.textContent = secondsLeft;
 
             //if the clock runs out, the game is over.
-            if (secondsLeft === 0) {
+            if (secondsLeft <= 0) {
                 clearInterval(timerInterval);
                 endGame();
+                secondsLeft = 60;
             }
         }
-
+    timeLeftEl.textContent = secondsLeft;
+    
     }, 1000);
 };
 
