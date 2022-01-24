@@ -317,12 +317,17 @@ form > input:first-of-type {
     form {
         width: 60%;
         margin: 0 auto;
+        font-size: 20px;
     }
 
     /* increases form label size for larger devices  */
     form > label {
-        font-size: 150%;
-        padding-bottom: 5%;
+        font-size: 130%;
+        padding-bottom: 2%;
+    }
+
+    form > input:first-of-type {
+        margin: 3% 0;
     }
     
     /* changes flex behavior for full screens */
@@ -403,16 +408,24 @@ form > input:first-of-type {
 
     /* changes the negative spacing on the game over header element */
     #game-over > header {
-        margin: 5% 0 2% 0;
+        margin: 0 0 2% 0;
+    }
+
+    #game-over h2 {
+        font-size: 130%;
     }
 
     /* reduces the relative sizing of the participation medal */
     #medal-style {
         display: block;
-        font-size: 50%;
-        margin: 5% auto;
+        font-size: 40%;
+        margin: 1% auto 3% auto;
         text-align: center;
         color: tomato;
+    }
+
+    #btn-finish {
+        font-size: 130%;
     }
 
 }
